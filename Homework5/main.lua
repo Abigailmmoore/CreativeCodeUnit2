@@ -43,6 +43,21 @@ function draw()
   rect(width*0.34, height*0.13, width*0.13, height*0.18)
   rect(width*0.68, height*0.13, width*0.13, height*0.18)
 
+  --Street Lamps
+  fill(34, 34, 34)
+  rect(width*0.225, height*0.40, width*0.03, height*0.35)
+  rect(width*0.895, height*0.40, width*0.03, height*0.35)
+
+  --Lamp Lights
+  fill(255, 230, 55, 100)
+  triangle(width*0.24, height*0.35, width*0.14, height*0.75, width*0.34, height*0.75)
+  triangle(width*0.91, height*0.35, width*0.81, height*0.75, width*1.01, height*0.75)
+
+  --Lamp Caps
+  fill(34, 34, 34)
+  arc(width*0.24, height*0.40, width*0.05, height*0.10, PI, PI + PI)
+  arc(width*0.91, height*0.40, width*0.05, height*0.10, PI, PI + PI)
+
   --Mouse coordinates as a percentage of screen
   fill(255, 255, 255)
   text("X: "..mouseX/width.."  Y: "..mouseY/height, mouseX + 30, mouseY + 5)
