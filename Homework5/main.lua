@@ -1,7 +1,7 @@
 require("L5")
 
 function setup()
-  size(500, 500)
+  size(900, 800)
 
   -- Set the program title
   windowTitle("City Street")
@@ -58,8 +58,18 @@ function draw()
   arc(width*0.24, height*0.40, width*0.05, height*0.10, PI, PI + PI)
   arc(width*0.91, height*0.40, width*0.05, height*0.10, PI, PI + PI)
 
+  --Firefly
+  fill(172, 172, 172)
+  ellipse(mouseX, mouseY, width*0.05, height*0.02)
+  circle(mouseX + width*0.03, mouseY + height*-0.005, height*0.02)
+  fill(255, 230, 55)
+  arc(mouseX - width*0.01, mouseY, width*0.05, height*0.02, PI/2, PI*1.5)
+  fill(233, 216, 192)
+  triangle(mouseX + width*0.01, mouseY - height*0.005, mouseX - width*0.01, mouseY - height*0.04, mouseX - width*0.02, mouseY - height*0.03)
+  triangle(mouseX + width*0.01, mouseY - height*0.005, mouseX + width*0.005, mouseY - height*0.045, mouseX + width*0.02, mouseY - height*0.045)
+
   --Mouse coordinates as a percentage of screen
-  fill(255, 255, 255)
-  text("X: "..mouseX/width.."  Y: "..mouseY/height, mouseX + 30, mouseY + 5)
+  --fill(255, 255, 255)
+  --text("X: "..mouseX/width.."  Y: "..mouseY/height, mouseX + 30, mouseY + 5)
 
 end
